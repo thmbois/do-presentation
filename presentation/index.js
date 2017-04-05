@@ -137,13 +137,13 @@ export default class Presentation extends React.Component {
                 target="_blank"
                 href="https://bbq-server.dev.jonas-faber.me/graphiql"
               >
-                Eigenes Backend
+                <div>Eigenes Backend</div>
               </Link>
               <Link
                 target="_blank"
                 href="https://bbq-admin.dev.jonas-faber.me/recipes"
               >
-                Eigenes Dashboard
+              <div>Eigenes Dashboard</div>
               </Link>
             </Fill>
             <Fill>
@@ -236,6 +236,10 @@ export default class Presentation extends React.Component {
             filmdex
           </Heading>
           <Code>https://github.com/thmbois/filmdex</Code>
+          <Heading size={6} textColor="secondary" caps>
+            sawpi
+          </Heading>
+          <Code>https://api.graphcms.com/simple/v1/swapi</Code>
         </Slide>
 
         <Slide
