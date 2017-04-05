@@ -2,6 +2,7 @@
 import React from 'react';
 import CodeSlide from 'spectacle-code-slide';
 import QRCode from '../assets/QRCode';
+import ReactPlayer from 'react-player';
 
 import Shipdex from '../assets/Shipdex';
 // Import Spectacle Core tags
@@ -103,7 +104,20 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide bgImage={images.snack} transition={['fade']} bgColor="primary" textColor="tertiary">
-          
+        </Slide>
+        <Slide transition={['fade']} bgColor="quartenary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>GraphCMS</Heading>
+          <List>
+            <ListItem>GraphQL</ListItem>
+            <ListItem>Headless CMS</ListItem>
+            <ListItem>Rich Content APIs</ListItem>
+            <ListItem>Template oder Frontend sind egal</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} bgColor="quartenary" textColor="tertiary">
+          <Layout>
+            <video src='https://graphcms.com/assets/mp4/graphcms_intro_x2_xl.mp4' width="100%" height="100%" loop="true" controls="true"/>
+          </Layout>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
