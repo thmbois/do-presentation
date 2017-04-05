@@ -2,9 +2,8 @@
 import React from 'react';
 import CodeSlide from 'spectacle-code-slide';
 import QRCode from '../assets/QRCode';
-import ReactPlayer from 'react-player';
 
-import Shipdex from '../assets/Shipdex';
+import Expo from '../assets/Expo';
 // Import Spectacle Core tags
 import {
   BlockQuote,
@@ -30,6 +29,7 @@ import createTheme from 'spectacle/lib/themes/default';
 // Require CSS
 require('normalize.css');
 require('spectacle/lib/themes/default/index.css');
+require('./index.css');
 
 const images = {
   city: require('../assets/city.jpg'),
@@ -38,7 +38,7 @@ const images = {
   markdown: require('../assets/markdown.png'),
   playstore: require('../assets/playstore.png'),
   appstore: require('../assets/appstore.png'),
-  snack: require('../assets/Snack-expo.png')
+  snack: require('../assets/Snack-expo.png'),
 };
 
 preloader(images);
@@ -77,18 +77,14 @@ export default class Presentation extends React.Component {
             <Fill>
               <Image width="50%" src={images.playstore} />
               <QRCode
-                bgColor="rgba(0,0,0,0)"
                 value="https://play.google.com/store/apps/details?id=host.exp.exponent&amp;referrer=www"
-                size="256"
                 showLink={false}
               />
             </Fill>
             <Fill>
               <Image width="50%" src={images.appstore} />
               <QRCode
-                bgColor="rgba(0,0,0,0)"
                 value="https://itunes.apple.com/app/apple-store/id982107779?pt=17102800&amp;ct=www&amp;mt=8"
-                size="256"
                 showLink={false}
               />
             </Fill>
@@ -103,8 +99,12 @@ export default class Presentation extends React.Component {
             <ListItem>UI Components</ListItem>
           </List>
         </Slide>
-        <Slide bgImage={images.snack} transition={['fade']} bgColor="primary" textColor="tertiary">
-        </Slide>
+        <Slide
+          bgImage={images.snack}
+          transition={['fade']}
+          bgColor="primary"
+          textColor="tertiary"
+        />
         <Slide transition={['fade']} bgColor="quartenary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>GraphCMS</Heading>
           <List>
@@ -116,7 +116,13 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={['fade']} bgColor="quartenary" textColor="tertiary">
           <Layout>
-            <video src='https://graphcms.com/assets/mp4/graphcms_intro_x2_xl.mp4' width="100%" height="100%" loop="true" controls="true"/>
+            <video
+              src="https://graphcms.com/assets/mp4/graphcms_intro_x2_xl.mp4"
+              width="100%"
+              height="100%"
+              loop="true"
+              controls="true"
+            />
           </Layout>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
@@ -129,19 +135,45 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>Shipdex</Heading>
-          <QRCode
-            bgColor="rgba(0,0,0,0)"
-            value="https://snack.expo.io/SkHBfXxTx"
-            size="256"
-          />
+          <Heading size={6} textColor="secondary" caps>Stardex</Heading>
+          <QRCode value="https://snack.expo.io/HyUbJcM6g" />
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <Shipdex />
-        </Slide>
+        <CodeSlide
+          transition={[]}
+          lang="jsx"
+          code={require('raw-loader!../assets/Stardex.example')}
+          ranges={[
+            { loc: [0, 999], title: 'Walking through some code' },
+            { loc: [0, 1], title: 'Libs', note: 'react' },
+            { loc: [1, 7], title: 'Libs', note: 'react-native' },
+            { loc: [7, 8], title: 'Libs', note: 'expo' },
+            { loc: [8, 9], title: 'Libs', note: 'styled-components' },
+            { loc: [10, 22], note: 'Functional-Component' },
+            { loc: [23, 38], note: 'Functional-Component' },
+            { loc: [38, 39], note: 'Class-Component' },
+            { loc: [39, 42], note: 'State' },
+            { loc: [43, 46], note: 'lifecycle-hook' },
+            { loc: [47, 48], note: 'new await syntax' },
+            { loc: [48, 62], note: 'graphql-query als string-literal' },
+            { loc: [62, 75], note: 'post request mittels fetch api' },
+            {
+              loc: [75, 79],
+              note: 'speichern des ergebnisses als json in state',
+            },
+            { loc: [82, 101], note: 'irrellevante Componenten für Header' },
+            {
+              loc: [101, 115],
+              note: 'weitergabe des state an die einzelnen Filme',
+            },
+            {
+              loc: [142, 148],
+              note: 'Styling mittles css, flexbox und styled-components',
+            },
+          ]}
+        />
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
           <Heading size={6} textColor="secondary" caps>BBQ-App</Heading>
-          <QRCode bgColor="rgba(0,0,0,0)" value="xx" size="256" />
+          <QRCode value="xx" />
         </Slide>
       </Deck>
     );
