@@ -8,6 +8,9 @@ export default (
 ) => (
   <div>
     <QRCode value={value} bgColor={bgColor} size={size} />
-    {showLink && <Link style={{ display: 'block' }} href={value}>{value}</Link>}
+    {showLink &&
+      <Link target="_blank" style={{ display: 'block' }} href={value}>
+        {value}
+      </Link>}
   </div>
 );

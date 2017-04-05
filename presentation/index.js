@@ -12,6 +12,7 @@ import {
   Heading,
   ListItem,
   List,
+  Link,
   Quote,
   Slide,
   Text,
@@ -126,6 +127,42 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="secondary" caps>
+            Selbst gebautes Backend vs. SaaS
+          </Heading>
+          <Layout>
+            <Fill>
+              <Link
+                target="_blank"
+                href="https://bbq-server.dev.jonas-faber.me/graphiql"
+              >
+                Eigenes Backend
+              </Link>
+              <Link
+                target="_blank"
+                href="https://bbq-admin.dev.jonas-faber.me/recipes"
+              >
+                Eigenes Dashboard
+              </Link>
+            </Fill>
+            <Fill>
+              <Link
+                target="_blank"
+                href="https://app.graphcms.com/cj0dvo3fj5gjw0152us8wvo3k/content"
+              >
+                GraphCMS
+              </Link>
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="secondary" caps>
+            BBQ-Recipes (hidden publish)
+          </Heading>
+          <QRCode value="exp://exp.host/@flexzuu/bbq-recipes" />
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="primary" textColor="secondary">
           <Heading size={6} textColor="secondary" caps>Filmdex</Heading>
           <QRCode value="https://snack.expo.io/HyUbJcM6g" />
         </Slide>
@@ -167,12 +204,6 @@ export default class Presentation extends React.Component {
             Filmdex (hidden publish)
           </Heading>
           <QRCode value="exp://exp.host/@flexzuu/filmdex" />
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>
-            BBQ-Recipes (hidden publish)
-          </Heading>
-          <QRCode value="exp://exp.host/@flexzuu/bbq-recipes" />
         </Slide>
       </Deck>
     );
