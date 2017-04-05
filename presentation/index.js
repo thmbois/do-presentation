@@ -1,7 +1,7 @@
 // Import React
 import React from 'react';
 import CodeSlide from 'spectacle-code-slide';
-var QRCode = require('qrcode.react');
+import QRCode from '../assets/QRCode';
 
 import Shipdex from '../assets/Shipdex';
 // Import Spectacle Core tags
@@ -78,6 +78,7 @@ export default class Presentation extends React.Component {
                 bgColor="rgba(0,0,0,0)"
                 value="https://play.google.com/store/apps/details?id=host.exp.exponent&amp;referrer=www"
                 size="256"
+                showLink={false}
               />
             </Fill>
             <Fill>
@@ -86,6 +87,7 @@ export default class Presentation extends React.Component {
                 bgColor="rgba(0,0,0,0)"
                 value="https://itunes.apple.com/app/apple-store/id982107779?pt=17102800&amp;ct=www&amp;mt=8"
                 size="256"
+                showLink={false}
               />
             </Fill>
           </Layout>
