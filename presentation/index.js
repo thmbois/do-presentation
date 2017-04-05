@@ -3,6 +3,7 @@ import React from "react";
 import CodeSlide from "spectacle-code-slide";
 var QRCode = require('qrcode.react');
 
+import Shipdex from '../assets/Shipdex';
 // Import Spectacle Core tags
 import {
   BlockQuote,
@@ -89,6 +90,9 @@ export default class Presentation extends React.Component {
             <Quote>Example Quote</Quote>
             <Cite>Author</Cite>
           </BlockQuote>
+        </Slide>
+        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
+          <Shipdex />
         </Slide>
       </Deck>
     );
