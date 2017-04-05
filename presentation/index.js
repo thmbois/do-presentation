@@ -126,8 +126,8 @@ export default class Presentation extends React.Component {
           <Shipdex />
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>Grillapp</Heading>
-          <QRCode bgColor="rgba(0,0,0,0)" value="" size="256" />
+          <Heading size={6} textColor="secondary" caps>BBQ-App</Heading>
+          <QRCode bgColor="rgba(0,0,0,0)" value="xx" size="256" />
         </Slide>
       </Deck>
     );
