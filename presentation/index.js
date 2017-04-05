@@ -1,5 +1,6 @@
 // Import React
 import React from "react";
+import CodeSlide from "spectacle-code-slide";
 
 // Import Spectacle Core tags
 import {
