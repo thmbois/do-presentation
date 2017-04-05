@@ -125,17 +125,8 @@ export default class Presentation extends React.Component {
             />
           </Layout>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
-        </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>Stardex</Heading>
+          <Heading size={6} textColor="secondary" caps>Filmdex</Heading>
           <QRCode value="https://snack.expo.io/HyUbJcM6g" />
         </Slide>
         <CodeSlide
@@ -172,8 +163,16 @@ export default class Presentation extends React.Component {
           ]}
         />
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>BBQ-App</Heading>
-          <QRCode value="xx" />
+          <Heading size={6} textColor="secondary" caps>
+            Filmdex (hidden publish)
+          </Heading>
+          <QRCode value="exp://exp.host/@flexzuu/filmdex" />
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="secondary" caps>
+            BBQ-Recipes (hidden publish)
+          </Heading>
+          <QRCode value="exp://exp.host/@flexzuu/bbq-recipes" />
         </Slide>
       </Deck>
     );
