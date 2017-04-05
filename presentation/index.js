@@ -1,6 +1,7 @@
 // Import React
 import React from "react";
 import CodeSlide from "spectacle-code-slide";
+var QRCode = require('qrcode.react');
 
 // Import Spectacle Core tags
 import {
@@ -12,7 +13,10 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Layout,
+  Fill,
+  Image
 } from "spectacle";
 
 // Import image preloader util
@@ -30,7 +34,9 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  playstore: require("../assets/playstore.png"),
+  appstore: require("../assets/appstore.png")
 };
 
 preloader(images);
@@ -51,20 +57,23 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            Dokumentenstrukturen
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            React Native - Exponent - GraphCMS
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+        <Slide transition={["fade"]} bgColor="quartenary">
+          <Layout>
+            <Fill>
+              <Image width="50%" src={images.playstore}/>
+              <QRCode value="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www" size="256" />
+            </Fill>
+            <Fill>
+              <Image width="50%" src={images.appstore}/>
+              <QRCode value="https://itunes.apple.com/app/apple-store/id982107779?pt=17102800&ct=www&mt=8" size="256" />
+            </Fill>
+          </Layout>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
