@@ -37,6 +37,7 @@ const images = {
   markdown: require('../assets/markdown.png'),
   playstore: require('../assets/playstore.png'),
   appstore: require('../assets/appstore.png'),
+  snack: require('../assets/Snack-expo.png')
 };
 
 preloader(images);
@@ -91,6 +92,18 @@ export default class Presentation extends React.Component {
               />
             </Fill>
           </Layout>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Expo.io</Heading>
+          <List>
+            <ListItem>Mobile Deployment Tool</ListItem>
+            <ListItem>Ohne Xcode oder Android Studio</ListItem>
+            <ListItem>Expo SDK</ListItem>
+            <ListItem>UI Components</ListItem>
+          </List>
+        </Slide>
+        <Slide bgImage={images.snack} transition={['fade']} bgColor="primary" textColor="tertiary">
+          
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
