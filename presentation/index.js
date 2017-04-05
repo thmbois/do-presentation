@@ -63,15 +63,15 @@ export default class Presentation extends React.Component {
             React Native - Exponent - GraphCMS
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="quartenary">
+        <Slide transition={["fade"]} bgColor="tertiary">
           <Layout>
             <Fill>
               <Image width="50%" src={images.playstore}/>
-              <QRCode value="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www" size="256" />
+              <QRCode bgColor="rgba(0,0,0,0)" value="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www" size="256" />
             </Fill>
             <Fill>
               <Image width="50%" src={images.appstore}/>
-              <QRCode value="https://itunes.apple.com/app/apple-store/id982107779?pt=17102800&ct=www&mt=8" size="256" />
+              <QRCode bgColor="rgba(0,0,0,0)" value="https://itunes.apple.com/app/apple-store/id982107779?pt=17102800&ct=www&mt=8" size="256" />
             </Fill>
           </Layout>
         </Slide>
