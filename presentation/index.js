@@ -1,6 +1,6 @@
 // Import React
-import React from "react";
-import CodeSlide from "spectacle-code-slide";
+import React from 'react';
+import CodeSlide from 'spectacle-code-slide';
 var QRCode = require('qrcode.react');
 
 import Shipdex from '../assets/Shipdex';
@@ -17,66 +17,80 @@ import {
   Text,
   Layout,
   Fill,
-  Image
-} from "spectacle";
+  Image,
+} from 'spectacle';
 
 // Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
+import preloader from 'spectacle/lib/utils/preloader';
 
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
+import createTheme from 'spectacle/lib/themes/default';
 
 // Require CSS
-require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
-
+require('normalize.css');
+require('spectacle/lib/themes/default/index.css');
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
-  playstore: require("../assets/playstore.png"),
-  appstore: require("../assets/appstore.png")
+  city: require('../assets/city.jpg'),
+  kat: require('../assets/kat.png'),
+  logo: require('../assets/formidable-logo.svg'),
+  markdown: require('../assets/markdown.png'),
+  playstore: require('../assets/playstore.png'),
+  appstore: require('../assets/appstore.png'),
 };
 
 preloader(images);
 
-const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
-}, {
-  primary: "Montserrat",
-  secondary: "Helvetica"
-});
+const theme = createTheme(
+  {
+    primary: 'white',
+    secondary: '#1F2022',
+    tertiary: '#03A9FC',
+    quartenary: '#CECECE',
+  },
+  {
+    primary: 'Montserrat',
+    secondary: 'Helvetica',
+  }
+);
 
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
+      <Deck
+        transition={['zoom', 'slide']}
+        transitionDuration={500}
+        theme={theme}
+      >
+        <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Dokumentenstrukturen
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            React Native - Exponent - GraphCMS
+            React Native - Expo.io - GraphCMS
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary">
           <Layout>
             <Fill>
-              <Image width="50%" src={images.playstore}/>
-              <QRCode bgColor="rgba(0,0,0,0)" value="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www" size="256" />
+              <Image width="50%" src={images.playstore} />
+              <QRCode
+                bgColor="rgba(0,0,0,0)"
+                value="https://play.google.com/store/apps/details?id=host.exp.exponent&amp;referrer=www"
+                size="256"
+              />
             </Fill>
             <Fill>
-              <Image width="50%" src={images.appstore}/>
-              <QRCode bgColor="rgba(0,0,0,0)" value="https://itunes.apple.com/app/apple-store/id982107779?pt=17102800&ct=www&mt=8" size="256" />
+              <Image width="50%" src={images.appstore} />
+              <QRCode
+                bgColor="rgba(0,0,0,0)"
+                value="https://itunes.apple.com/app/apple-store/id982107779?pt=17102800&amp;ct=www&amp;mt=8"
+                size="256"
+              />
             </Fill>
           </Layout>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
           <List>
             <ListItem>Item 1</ListItem>
@@ -85,14 +99,20 @@ export default class Presentation extends React.Component {
             <ListItem>Item 4</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide transition={['fade']} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="secondary" caps>Shipdex</Heading>
+          <QRCode
+            bgColor="rgba(0,0,0,0)"
+            value="https://snack.expo.io/SkHBfXxTx"
+            size="256"
+          />
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
           <Shipdex />
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="secondary" caps>Grillapp</Heading>
+          <QRCode bgColor="rgba(0,0,0,0)" value="" size="256" />
         </Slide>
       </Deck>
     );
