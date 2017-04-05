@@ -8,6 +8,7 @@ import Expo from '../assets/Expo';
 import {
   BlockQuote,
   Cite,
+  Code,
   Deck,
   Heading,
   ListItem,
@@ -127,7 +128,7 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>
+          <Heading size={6} textColor="tertiary" caps>
             Selbst gebautes Backend vs. SaaS
           </Heading>
           <Layout>
@@ -156,14 +157,14 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>
+          <Heading size={6} textColor="tertiary" caps>
             BBQ-Recipes (hidden publish)
           </Heading>
           <QRCode value="exp://exp.host/@flexzuu/bbq-recipes" />
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>Filmdex</Heading>
+          <Heading size={6} textColor="tertiary" caps>Filmdex</Heading>
           <QRCode value="https://snack.expo.io/HyUbJcM6g" />
         </Slide>
         <CodeSlide
@@ -200,11 +201,48 @@ export default class Presentation extends React.Component {
           ]}
         />
         <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-          <Heading size={6} textColor="secondary" caps>
+          <Heading size={6} textColor="tertiary" caps>
             Filmdex (hidden publish)
           </Heading>
           <QRCode value="exp://exp.host/@flexzuu/filmdex" />
         </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="tertiary" caps>
+            Repos:
+          </Heading>
+          <Heading size={6} textColor="secondary" caps>
+            Web
+          </Heading>
+          <Code>https://github.com/do-ws-2016/bbq-web</Code>
+          <Heading size={6} textColor="secondary" caps>
+            old App
+          </Heading>
+          <Code>https://github.com/do-ws-2016/do-ws-2016-app</Code>
+
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="tertiary" caps>
+            Repos:
+          </Heading>
+          <Heading size={6} textColor="secondary" caps>
+            new App
+          </Heading>
+          <Code>https://github.com/do-ws-2016/bbq-recipes</Code>
+          <Heading size={6} textColor="secondary" caps>
+            Server
+          </Heading>
+          <Code>https://github.com/do-ws-2016/do-ws-2016</Code>
+          <Heading size={6} textColor="secondary" caps>
+            filmdex
+          </Heading>
+          <Code>https://github.com/thmbois/filmdex</Code>
+        </Slide>
+
+        <Slide
+          transition={['fade']}
+          bgColor="quartenary"
+          textColor="secondary"
+        />
       </Deck>
     );
   }
